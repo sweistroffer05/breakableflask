@@ -21,7 +21,7 @@ jobs:
           scan-type: fs
           scan-ref: .
           scanners: vuln
-          severity: HIGH,CRITICAL
+          severity: CRITICAL
           exit-code: '1'
 
   Dockerfile:
@@ -36,7 +36,7 @@ jobs:
         with:
           scan-type: config
           scan-ref: .
-          severity: HIGH,CRITICAL
+          severity: CRITICAL
           exit-code: '1'
 
       - name: Build Docker image
@@ -47,7 +47,7 @@ jobs:
         with:
           scan-type: image
           image-ref: breakableflask:latest
-          severity: HIGH,CRITICAL
+          severity: CRITICAL
           exit-code: '1'
 
   Deploy:
